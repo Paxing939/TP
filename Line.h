@@ -14,6 +14,13 @@ enum LineType {
 };
 
 class Line : public OpenFigure {
+public:
+
+  void Draw() override;
+
+  void Move() override;
+
+  std::vector<Point> GetLocation() override;
 
 };
 

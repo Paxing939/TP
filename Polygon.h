@@ -5,10 +5,23 @@
 #ifndef TP_POLYGON_H
 #define TP_POLYGON_H
 
-#include "ClosedFigure.h"
+#include "CloseFigure.h"
 
-class Polygon : public ClosedFigure {
+class Polygon : public CloseFigure {
+public:
 
+  const Point &GetPoints() const;
+
+  void SetPoints(const Point &points);
+
+  void Draw() override;
+
+  void Move() override;
+
+  std::vector<Point> GetLocation() override;
+
+private:
+  Point points;
 };
 
 

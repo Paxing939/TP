@@ -3,3 +3,15 @@
 //
 
 #include "Line.h"
+
+void Line::Draw() {
+
+}
+
+void Line::Move() {
+
+}
+
+std::vector<Point> Line::GetLocation() {
+  return std::vector<Point>();
+}

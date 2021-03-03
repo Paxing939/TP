@@ -8,7 +8,19 @@
 #include "Figure.h"
 
 class OpenFigure : public Figure {
+public:
 
+  const Point &GetEndPoint() const;
+
+  void SetEndPoint(const Point &endPoint);
+
+  const Point &GetStartPoint() const;
+
+  void SetStartPoint(const Point &startPoint);
+
+private:
+  Point end_point;
+  Point start_point;
 };
 
 
