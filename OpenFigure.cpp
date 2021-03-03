@@ -4,18 +4,19 @@
 
 #include "OpenFigure.h"
 
-const Point &OpenFigure::GetEndPoint() const {
+
+const QPoint &OpenFigure::GetEndPoint() const {
   return end_point;
 }
 
-void OpenFigure::SetEndPoint(const Point &endPoint) {
+void OpenFigure::SetEndPoint(const QPoint &endPoint) {
   end_point = endPoint;
 }
 
-const Point &OpenFigure::GetStartPoint() const {
+const QPoint &OpenFigure::GetStartPoint() const {
   return start_point;
 }
 
-void OpenFigure::SetStartPoint(const Point &startPoint) {
+void OpenFigure::SetStartPoint(const QPoint &startPoint) {
   start_point = startPoint;
 }

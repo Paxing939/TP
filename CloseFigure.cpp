@@ -11,3 +11,4 @@ const Color &CloseFigure::GetInnerColor() const {
 void CloseFigure::SetInnerColor(const Color &innerColor) {
   inner_color = innerColor;
 }
+

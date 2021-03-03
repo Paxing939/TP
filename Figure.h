@@ -4,12 +4,8 @@
 
 #ifndef TP_FIGURE_H
 #define TP_FIGURE_H
-
+#include<QPainter>
 #include <vector>
-
-struct Point {
-  int x, y;
-};
 
 struct Color {
   int r, g, b;
@@ -19,25 +15,23 @@ struct Color {
 class Figure {
 public:
 
-  Figure(const Color &borderColor, const Point &center);
-
   const Color &GetBorderColor() const;
 
   void SetBorderColor(const Color &borderColor);
 
-  const Point &GetCenter() const;
+  const QPoint &GetCenter() const;
 
-  void SetCenter(const Point &center);
+  void SetCenter(const QPoint &center);
 
-  virtual void Draw() = 0;
+  virtual void Draw(QPainter* painter) = 0;
 
   virtual void Move() = 0;
 
-  virtual std::vector<Point> GetLocation() = 0;
+  virtual std::vector<QPoint> GetLocation() = 0;
 
 private:
   Color border_color_;
-  Point center_;
+  QPoint center_;
 };
 
 

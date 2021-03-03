@@ -9,24 +9,18 @@
 
 class Ellipse : public CloseFigure {
 public:
+  Ellipse(QPoint center_,int rx_, int ry_);
 
-  const Point &GetFirstFocus() const;
-
-  void SetFirstFocus(const Point &firstFocus);
-
-  const Point &GetSecondFocus() const;
-
-  void SetSecondFocus(const Point &secondFocus);
-
-  void Draw() override;
+  void Draw(QPainter* painter) override;
 
   void Move() override;
 
-  std::vector<Point> GetLocation() override;
+  std::vector<QPoint> GetLocation() override;
 
 private:
-  Point first_focus;
-  Point second_focus;
+  QPoint center;
+  int rx;
+  int ry;
 };
 
 

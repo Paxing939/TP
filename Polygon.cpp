@@ -4,22 +4,21 @@
 
 #include "Polygon.h"
 
-const Point &Polygon::GetPoints() const {
-  return points;
+
+Polygon::Polygon(QPoint *points_, int num_of_points_)
+{
+    num_of_points = num_of_points_;
+    points = points_;
 }
 
-void Polygon::SetPoints(const Point &points) {
-  Polygon::points = points;
-}
-
-void Polygon::Draw() {
-
+void Polygon::Draw(QPainter* painter) {
+    painter->drawPolygon(points,num_of_points);
 }
 
 void Polygon::Move() {
 
 }
 
-std::vector<Point> Polygon::GetLocation() {
-  return std::vector<Point>();
+std::vector<QPoint> Polygon::GetLocation() {
+  return std::vector<QPoint>();
 }

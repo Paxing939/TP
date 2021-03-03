@@ -10,17 +10,18 @@
 class OpenFigure : public Figure {
 public:
 
-  const Point &GetEndPoint() const;
+  const QPoint &GetEndPoint() const;
 
-  void SetEndPoint(const Point &endPoint);
 
-  const Point &GetStartPoint() const;
+  void SetEndPoint(const QPoint &endPoint);
 
-  void SetStartPoint(const Point &startPoint);
+  const QPoint &GetStartPoint() const;
 
-private:
-  Point end_point;
-  Point start_point;
+  void SetStartPoint(const QPoint &startPoint);
+
+protected:
+  QPoint start_point;
+  QPoint end_point;
 };
 
 

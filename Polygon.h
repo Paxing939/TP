@@ -10,18 +10,20 @@
 class Polygon : public CloseFigure {
 public:
 
-  const Point &GetPoints() const;
+  Polygon(QPoint* points_,int num_of_points_);
+  const QPoint &GetPoints() const;
 
-  void SetPoints(const Point &points);
+  void SetPoints(const QPoint &points);
 
-  void Draw() override;
+  void Draw(QPainter* painter) override;
 
   void Move() override;
 
-  std::vector<Point> GetLocation() override;
+  std::vector<QPoint> GetLocation() override;
 
 private:
-  Point points;
+  QPoint* points;
+  int num_of_points;
 };
 
 

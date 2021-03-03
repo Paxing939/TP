@@ -13,9 +13,17 @@ class MainWindow : public QMainWindow
 
 public:
     MainWindow(QWidget *parent = nullptr);
+
+
     ~MainWindow();
+
+protected:
+    void paintEvent(QPaintEvent *event);
 
 private:
     Ui::MainWindow *ui;
+
+private slots:
+    void on_comboBox_currentTextChanged(const QString &arg1);
 };
 #endif // MAINWINDOW_H

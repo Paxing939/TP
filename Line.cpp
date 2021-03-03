@@ -4,14 +4,19 @@
 
 #include "Line.h"
 
-void Line::Draw() {
+Line::Line(QPoint start, QPoint end){
+    start_point = start;
+    end_point = end;
+}
 
+void Line::Draw(QPainter* painter) {
+    painter->drawLine(start_point,end_point);
 }
 
 void Line::Move() {
 
 }
 
-std::vector<Point> Line::GetLocation() {
-  return std::vector<Point>();
+std::vector<QPoint> Line::GetLocation() {
+  return std::vector<QPoint>();
 }
