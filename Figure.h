@@ -25,7 +25,7 @@ public:
 
   virtual void Draw(QPainter* painter) = 0;
 
-  virtual void Move() = 0;
+  virtual void Move(const QPoint& new_center) = 0;
 
   virtual std::vector<QPoint> GetLocation() = 0;
 

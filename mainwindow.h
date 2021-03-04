@@ -22,8 +22,10 @@ protected:
 
 private:
     Ui::MainWindow *ui;
+    bool MoveMode = false;
 
 private slots:
     void on_comboBox_currentTextChanged(const QString &arg1);
+    void on_checkBox_stateChanged(int arg1);
 };
 #endif // MAINWINDOW_H

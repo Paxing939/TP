@@ -10,8 +10,8 @@ void Ellipse::Draw(QPainter* painter) {
     painter->drawEllipse(center,rx,ry);
 }
 
-void Ellipse::Move() {
-
+void Ellipse::Move(const QPoint& new_center) {
+    center = new_center;
 }
 
 std::vector<QPoint> Ellipse::GetLocation() {

@@ -16,13 +16,15 @@ enum LineType {
 class Line : public OpenFigure {
 public:
 
-  Line(QPoint start,QPoint end);
+  Line(QPoint start,QPoint end,LineType type);
   void Draw(QPainter* painter) override;
 
-  void Move() override;
+  void Move(const QPoint& new_start) override;
 
   std::vector<QPoint> GetLocation() override;
 
+private:
+  LineType type;
 };
 
 

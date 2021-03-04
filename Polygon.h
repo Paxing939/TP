@@ -17,7 +17,7 @@ public:
 
   void Draw(QPainter* painter) override;
 
-  void Move() override;
+  void Move(const QPoint& new_center) override;
 
   std::vector<QPoint> GetLocation() override;
 
